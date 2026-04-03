@@ -89,7 +89,29 @@ while cap.isOpened():
 
 cap.release()
 
-df = pd.DataFrame(passes)
-df.to_csv("data/passesf.csv", index=False)
+import pandas as pd
 
+df = pd.DataFrame(passes)
+
+# create undirected pairs
+df["pair"] = df.apply(
+    lambda row: tuple(sorted((row["passer"], row["receiver"]))),
+    axis=1
+)
+
+# count passes per pair
+pair_counts = df.groupby("pair").size().reset_index(name="passes")
+
+# split pair
+pair_counts[["player1","player2"]] = pd.DataFrame(
+    pair_counts["pair"].tolist(),
+    index=pair_counts.index
+)
+
+# save smaller file
+pair_counts[["player1","player2","passes"]].to_csv(
+    "data/passes.csv", index=False
+)
+
+print("✅ Saved compressed passes file")
 print(f"✅ Pass dataset saved with {len(df)} passes")
