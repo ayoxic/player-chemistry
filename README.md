@@ -156,44 +156,9 @@ player-chemistry-analysis/
 ├── .gitignore                    # 🚫 Ignored files
 └── README.md                     # 📖 Documentation
 ```
-
+## streamlit dashboard
 
 streamlit run dashboard.py
-
----
-
-## 📂 Project Structure
-
-player-chemistry-analysis/
-│
-├── src/
-│   ├── core/                     # 🧠 Chemistry computation (backend)
-│   │   ├── pass_chemistry.py         # Fast interaction-based chemistry
-│   │   ├── proximity_chemistry.py    # Spatial proximity-based chemistry
-│   │   └── final_chemistry.py        # Hybrid combined score
-│   │
-│   ├── analytics/               # 📊 Visualization & insights
-│   │   ├── pass_network.py          # Pass network graph
-│   │   └── player_heatmap.py        # Player movement heatmaps
-│   │
-│   ├── detection/               # 🎯 Player detection (YOLO)
-│   ├── tracking/                # 🧭 Player tracking across frames
-│   └── utils/                   # 🔧 Helper functions
-│
-├── data/
-│   ├── sample_output/           # 📁 Example outputs (for GitHub preview)
-│   │   ├── final_chemistry.csv
-│   │   └── dashboard.png
-│
-├── models/                     # 🤖 YOLO weights (ignored in Git)
-│
-├── dashboard.py               # 📊 Streamlit dashboard (UI layer)
-├── pipeline.py                # ⚙️ Runs full processing pipeline
-├── main.py                    # 🚀 Entry point (optional)
-├── requirements.txt           # 📦 Dependencies
-├── .gitignore                 # 🚫 Ignore large files/models
-└── README.md                  # 📖 Project documentation
-
 
 ---
 
