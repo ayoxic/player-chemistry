@@ -183,7 +183,7 @@ streamlit run dashboard.py
 
 ## 👤 Author
 
-Your Name
+Ay0xic
 
 ---
 
