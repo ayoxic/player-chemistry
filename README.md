@@ -122,7 +122,41 @@ python pipeline.py
 
 ---
 
-### 3️⃣ Launch dashboard
+## 📂 Project Structure
+
+```
+player-chemistry-analysis/
+│
+├── src/                          # 💻 Source code
+│   ├── core/                     # 🧠 Chemistry computation (backend)
+│   │   ├── pass_chemistry.py         # Fast interaction-based chemistry
+│   │   ├── proximity_chemistry.py    # Spatial proximity-based chemistry
+│   │   └── final_chemistry.py        # Hybrid combined score
+│   │
+│   ├── analytics/                # 📊 Visualization & analysis
+│   │   ├── pass_network.py           # Pass network graph
+│   │   └── player_heatmap.py         # Player movement heatmaps
+│   │
+│   ├── detection/                # 🎯 Player detection (YOLO)
+│   ├── tracking/                 # 🧭 Player tracking across frames
+│   └── utils/                    # 🔧 Helper functions
+│
+├── data/                         # 📁 Data (ignored except samples)
+│   ├── sample_output/            # 📊 Example outputs
+│   │   ├── final_chemistry.csv
+│   │   └── dashboard.png
+│
+├── models/                       # 🤖 Model weights (ignored in Git)
+│
+├── dashboard.py                  # 📊 Streamlit dashboard
+├── pipeline.py                   # ⚙️ Full pipeline execution
+├── main.py                       # 🚀 Entry point (optional)
+│
+├── requirements.txt              # 📦 Dependencies
+├── .gitignore                    # 🚫 Ignored files
+└── README.md                     # 📖 Documentation
+```
+
 
 streamlit run dashboard.py
 
