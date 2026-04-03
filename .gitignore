@@ -1,0 +1,4 @@
+models/*.pt
+data/videos/*
+*.mp4
+__pycache__/
