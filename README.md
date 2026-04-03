@@ -38,23 +38,33 @@ This separation ensures modularity and scalability.
 
 ## 🧠 Methodology
 
-### Pipeline:
+## 🧠 Processing Pipeline
 
-Video
-↓
-Player Detection (YOLO)
-↓
-Tracking (assign IDs across frames)
-↓
-Ball Detection
-↓
-Possession Estimation
-↓
-Pass Detection
-↓
+The system follows a multi-stage pipeline to transform raw video into player chemistry insights:
+
+```
+Video Input
+   ↓
+Player & Ball Detection (YOLOv8)
+   ↓
+Multi-Object Tracking (assign consistent player IDs)
+   ↓
+Spatial Feature Extraction (player positions per frame)
+   ↓
+Possession Estimation (closest player to ball over time)
+   ↓
+Pass Detection (possession transitions)
+   ↓
 Chemistry Computation
-
----
+   ├── Pass-Based Interaction Score
+   ├── Proximity-Based Spatial Score
+   └── Hybrid Chemistry Score
+   ↓
+Analytics & Visualization
+   ├── Chemistry Tables
+   ├── Pass Network Graph
+   └── Player Heatmaps
+```
 
 ## 📊 Chemistry Models
 
