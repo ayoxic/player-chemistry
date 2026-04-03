@@ -1,4 +1,8 @@
-# ⚽ Football Player Chemistry Analysis
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+
+# ⚽ Computer vision pipeline for analyzing football player chemistry using hybrid interaction and spatial models.
 
 ## 📌 Overview
 
@@ -107,14 +111,20 @@ Final Score = 0.6 × Pass Score + 0.4 × Proximity Score
 
 ## 🛠️ Tech Stack
 
-* Python
-* OpenCV
-* YOLOv8 (Ultralytics)
-* Pandas
-* NumPy
-* Streamlit
-* Matplotlib
-* tqdm
+### Backend & Data Processing
+- Python
+- OpenCV
+- YOLOv8 (Ultralytics)
+- Pandas & NumPy
+
+### Visualization & UI
+- Streamlit (Python-based dashboard)
+
+### Concepts Applied
+- Data pipelines
+- Computer vision
+- Multi-model fusion
+- Analytics & visualization
 
 ---
 
