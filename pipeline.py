@@ -5,12 +5,13 @@ from tqdm import tqdm
 # Define pipeline steps
 # -------------------------
 steps = [
-    "python src/core/pass_chemistry.py",
-    "python src/core/chemistry_proximity.py",
-    "python src/core/player_chemistry.py"
+    ("Pass Chemistry", "src/core/pass_chemistry.py"),
+    ("Proximity Chemistry", "src/core/chemistry_proximity.py"),
+    ("Final Chemistry", "src/core/player_chemistry.py")
 ]
+
 # -------------------------
-# Run pipeline with progress bar
+# Run pipeline
 # -------------------------
 for step_name, script in tqdm(steps, desc="Pipeline Progress"):
 
@@ -22,10 +23,8 @@ for step_name, script in tqdm(steps, desc="Pipeline Progress"):
         text=True
     )
 
-    # print script output
     print(result.stdout)
 
-    # check for errors
     if result.returncode != 0:
         print(f"\n❌ Error in step: {step_name}")
         print(result.stderr)
